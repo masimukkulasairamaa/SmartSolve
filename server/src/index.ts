@@ -38,7 +38,7 @@ app.use("/api/auth/login", authLimit);
 app.use("/api/auth/signup", authLimit);
 app.use("/api/auth/refresh", authLimit);
 
-const clientDist = path.resolve(__dirname, "../../client/dist");
+const clientDist = path.resolve(process.cwd(), "../client/dist");
 const clientIndex = path.join(clientDist, "index.html");
 
 app.use(express.static(clientDist));
